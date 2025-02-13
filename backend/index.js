@@ -19,15 +19,26 @@ app.get('/',(req,res)=>{
 });
 app.use(express.json());
 app.use(cookieParser());
+const allowedOrigins = [
+  "https://book-o-mania.vercel.app", 
+  "https://book-o-mania-1.onrender.com"
+];
 
 app.use(
   cors({
-    origin: "https://book-o-mania.vercel.app", // ✅ Frontend URL (Update if needed)
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT"],
   })
 );
+
 
 // ✅ Define routes
 app.use('/api/auth', authRoutes);
