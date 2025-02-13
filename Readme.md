@@ -25,9 +25,7 @@ Live Link: https://book-world-beta.vercel.app/
   - Personalized profiles to track activity.
   - Manage and curate a list of favorite books.
 
-- **Advanced Feature:**
 
-  - Unique nested commenting system using Depth-First Search (DFS) for efficient comment deletion within the review tree structure.
 
 - **User Roles & Permissions:**
   - Differentiation between user and admin roles.
@@ -85,8 +83,8 @@ If you don't have Cloudinary, you can replace `cloudStorage` with `diskStorage` 
 #### Clone the Repository
 
 ```shell
-git clone https://github.com/NEET64/book-world.git
-cd book-world
+https://github.com/aritra1189/Book-o-Mania.git
+cd simple-form
 ```
 
 #### Install packages
