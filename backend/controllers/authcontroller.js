@@ -130,13 +130,13 @@ exports.loginUser = async (req, res) => {
         .cookie("accessToken", accesstoken, {
           httpOnly: true,
           secure:true,
-          sameSite: "lax",
-          maxAge: 15 * 60 * 1000,
+          sameSite: "None",
+          maxAge: 15 * 60 * 10000,
         })
         .cookie("refreshToken", refreshtoken, {
           httpOnly: true,
           secure: process.env.NODE_ENV === "production",
-          sameSite: "lax",
+          sameSite: "None",
           maxAge: 7 * 24 * 60 * 60 * 1000,
         })
         .status(200)
