@@ -14,7 +14,9 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 connectdb();
-
+app.get('/',(req,res)=>{
+  res.send("hello from aritra")
+});
 app.use(express.json());
 app.use(cookieParser());
 
