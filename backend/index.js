@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://book-o-mania.vercel.app/", // ✅ Frontend URL (Update if needed)
+    origin: "https://book-o-mania.vercel.app", // ✅ Frontend URL (Update if needed)
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT"],
@@ -42,7 +42,7 @@ app.options("*", cors());
 
 const io = new Server(server, {
   cors: {
-    origin: "https://book-o-mania.vercel.app/",
+    origin: "https://book-o-mania.vercel.app",
     credentials: true,
   },
   transports: ["websocket", "polling"], // ✅ Ensures WebSockets work
