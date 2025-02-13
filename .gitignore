@@ -1,0 +1,53 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Build files
+dist/
+build/
+.cache/
+.next/
+out/
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Mac system files
+.DS_Store
+
+# Debugging
+*.pid
+*.seed
+
+# Database files
+mongodb/
+dump/
+*.sqlite
+*.sqlite3
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Ignore compiled TypeScript files (if using TypeScript)
+*.tsbuildinfo
