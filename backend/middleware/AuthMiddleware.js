@@ -3,6 +3,7 @@ const User = require("../models/User");
 
 const verifyJwt = async (req, res, next) => {
   try {
+    console.log("Cookies received:", req.cookies);
     const token = req.cookies.accessToken; 
     console.log("Token received:", token); // Debugging
 
